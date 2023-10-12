@@ -1,5 +1,5 @@
 # The hostname for the deployment
-hostname:
+hostname: "esgf.apps.ock.fmi.fi"
 
 ###
 # Image defaults
@@ -209,9 +209,9 @@ data:
   #          in addition to the groups required to access data
   # By default, we run as the esgf user/group
   podSecurityContext:
-    runAsUser: 1000
+    #runAsUser: 1000
     runAsGroup: 1000
-    fsGroup: 1000
+    #fsGroup: 1000
   securityContext:
     # Run with a read-only root filesystem by default
     readOnlyRootFilesystem: true
@@ -381,9 +381,9 @@ index:
     # This should normally not need to change unless Solr pods are configured to use
     # specific paths on the host for core storage
     podSecurityContext:
-      runAsUser: 1000
+      #runAsUser: 1000
       runAsGroup: 1000
-      fsGroup: 1000
+      #fsGroup: 1000
     # The container security context for all Solr containers
     securityContext:
       # Run with a read-only root filesystem by default
